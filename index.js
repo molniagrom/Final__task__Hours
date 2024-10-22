@@ -1,7 +1,9 @@
 let timerId; // переменная, которая будет хранить ID таймера
 
 function updateClock() {
- // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ new Date()
+  const clock = document.getElementById("clock");
+
+  // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ new Date()
   const now = new Date();
 
   let hours = now.getHours();
@@ -12,9 +14,7 @@ function updateClock() {
   minutes = minutes < 10 ? "0" + minutes : minutes;
   seconds = seconds < 10 ? "0" + seconds : seconds;
 
-  document
-    .getElementById("clock")
-    .textContent = hours + ':' + minutes + ':' + seconds;
+  clock.textContent = hours + ":" + minutes + ":" + seconds;
 }
 
 const startButton = document.getElementById("start");
@@ -28,5 +28,3 @@ stopButton.addEventListener("click", function () {
   // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ clearInterval
   clearInterval(timerId); // останавливаем таймер
 });
-
-
