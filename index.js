@@ -14,7 +14,7 @@ function updateClock() {
 
   document
     .getElementById("clock")
-    .textContent(`${hours}:${minutes}:${seconds}`);
+    .textContent = hours + ':' + minutes + ':' + seconds;
 }
 
 const startButton = document.getElementById("start");
