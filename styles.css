@@ -25,3 +25,13 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+.zeroing__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#zeroing{
+  margin-top: 4%;
+}
