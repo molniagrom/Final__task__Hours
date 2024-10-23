@@ -51,3 +51,12 @@ resetButton.addEventListener("click", function () {
 
 // 🌟 The task with the asterisk. Explanation
 
+// Проблема в том, что при многократном нажатии на кнопку "Запустить часы", код может создать несколько таймеров, даже если мы используем проверку if (!timerId). Это происходит потому, что после первого нажатия на кнопку таймер уже создаётся и хранится в переменной timerId, но повторные нажатия создают новый таймер, не сбрасывая предыдущий. Когда мы нажимаем "Остановить часы", мы останавливаем только последний созданный таймер, но предыдущие продолжают работать.
+
+// Чтобы решить эту проблему, нужно обеспечить правильное отключение старого таймера, если кнопка "Запустить" нажимается повторно. Мы можем добавить логику для сброса текущего таймера перед созданием нового.
+
+// .........................................................................
+
+// The problem is that when we press the "Start clock" button repeatedly, the code may create several timers, even if we use the if (!timerId) check. This is because after the first click on the button, a timer is already created and stored in the timerId variable, but repeated clicks create a new timer without resetting the previous one. When we click "Stop clock", we stop only the last created timer, but the previous ones keep running. 
+
+// To solve this problem, we need to ensure that the old timer is properly disabled if the "Start" button is pressed repeatedly. We can add logic to reset the current timer before creating a new one.
